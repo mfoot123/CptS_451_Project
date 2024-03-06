@@ -43,9 +43,6 @@ def parseBusinessData():
               f"{data['is_open']}"
           )
 
-
-
-
           # write our string out to 'yelp_business.txt'
           outfile.write(businessStr + '\n')
         
@@ -70,14 +67,8 @@ def parseBusinessData():
                   f"'{hours.split('-')[1]}'"
               )
 
-
-
-
               # write this info to our txt
               outfile.write(hours_str + '\n')
-
-
-
 
           # iterates over the items of the 'attributes' dictionary
           for attr, value in data['attributes'].items():
@@ -91,9 +82,6 @@ def parseBusinessData():
                           f"'{sub_value}'"
                       )
 
-
-
-
                       # write this info to our txt
                       outfile.write(attrStr + '\n')
               # value is a simple value like a string or number
@@ -104,16 +92,10 @@ def parseBusinessData():
                       f"'{value}'"
                   )
 
-
-
-
                   # write this info to our txt
                   outfile.write(attrStr + '\n')
           # increment our line count
           count_line +=1
-
-
-
 
   # print our line count
   print(count_line)
@@ -121,9 +103,6 @@ def parseBusinessData():
   outfile.close()
   # close f
   f.close()
-
-
-
 
 def parseReviewData():
   print("Parsing reviews...")
@@ -154,18 +133,12 @@ def parseReviewData():
           # increment our line count
           count_line +=1
 
-
-
-
   # print our line count
   print(count_line)
   # close our outfile
   outfile.close()
   # close f
   f.close()
-
-
-
 
 def parseUserData():
   print("Parsing users...")
@@ -192,13 +165,6 @@ def parseUserData():
           # write our string out to 'yelp_user.txt'
           outfile.write(usrStr + '\n')
 
-
-
-
-
-
-
-
           for friend in data["friends"]:
               friendStr = f"'{data['user_id']}', '{friend}'"
               outfile.write(friendStr)
@@ -207,18 +173,12 @@ def parseUserData():
           # increment our line count
           count_line +=1
 
-
-
-
   # print our line count
   print(count_line)
   # close our outfile
   outfile.close()
   # close f
   f.close()
-
-
-
 
 def parseCheckinData():
   print("Parsing checkins...")
@@ -244,9 +204,6 @@ def parseCheckinData():
                   outfile.write(checkinStr + "\n")
           # increment our line count
           count_line +=1
-
-
-
 
   # print our line count
   print(count_line)
